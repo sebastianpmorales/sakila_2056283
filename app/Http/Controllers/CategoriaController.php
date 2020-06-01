@@ -73,7 +73,7 @@ class CategoriaController extends Controller
         $validador = validator::make($_POST, $reglas, $mensajes);
         if($validador->fails()){
 
-            return redirect('categorias/edit/'.$categoria->category_id)->withErrors($validador)->withInput();
+            return redirect('categorias/edit/'.$_POST["categoriaActualizada"])->withErrors($validador)->withInput();
 
         }else{
 
