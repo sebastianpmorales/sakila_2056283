@@ -66,7 +66,8 @@ class CategoriaController extends Controller
         $mensajes = [
             "required"=>"Campo requerido",
             "alpha" => "Solo Letras",
-            "unique"=>"Categoria repetida"
+            "unique"=>"Categoria repetida",
+            "min" => "Solo categorias de :min caracteres"
 
         ];
         $validador = validator::make($_POST, $reglas, $mensajes);
